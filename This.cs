@@ -13,7 +13,7 @@ Nami.Print();
 
 class Person
 {
-    public string? name;
+    public string? name; 
     public int? age;
 
     public Person()
@@ -25,14 +25,14 @@ class Person
 
     public Person(string name)
     {
-        this.name = name;
+        this.name = name; // LUCK.NAME = "LUCK"
         age = 2;
     }
 
     public Person(string name, int age)
     {
-        this.name = name;
-        this.age = age;
+        this.name = name; // NAMI.NAME = "NAMI"
+        this.age = age;   // NAMI.AGE = AGE
     }
 
     public void Print()
