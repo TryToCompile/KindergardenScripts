@@ -8,6 +8,10 @@ tom.PrintName();
 tom.FullPrint();
 Person thomas = new() { company = { title = "GooGle", hired = "yes", salary = 100, workers = 10 }, age = 15, name = "Thomas" };
 thomas.FullPrint();
+
+(string name, int age) = thomas; // deconstruction
+
+Console.WriteLine($"{name} { age}");
 class Person
 {
     public string name;
@@ -30,13 +34,9 @@ class Person
         Console.WriteLine($"{name}\t {age}\t {company.title}\t {company.salary}\t {company.workers}\t {company.hired}\t");
     }
 
-}
-
-
-class Company
-{
-    public string title = "Unknown";
-    public int salary = 0;
-    public int workers = 0;
-    public string hired = "not";
+    public void Deconstruct(out string nameOut, out int ageOut) // deconstruction
+    {
+        nameOut = name;
+        ageOut = age;
+    }
 }
