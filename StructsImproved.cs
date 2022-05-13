@@ -6,6 +6,7 @@ Personale Adams = new();
 Personale Thomas = new("Thomas",10);
 Personale Mars = new("Mars");
 Personale Persi = new() { name = "Persi"};
+Personale Marsi = Persi with { name = "Marsi" };
 
 Adams.name = "Adams";
 Adams.Print();
@@ -15,6 +16,7 @@ Adams.Print();
 Thomas.Print();
 Mars.Print();
 Persi.Print();
+Marsi.Print();
 
 Persi.EditName();
 Persi.EditAge();
