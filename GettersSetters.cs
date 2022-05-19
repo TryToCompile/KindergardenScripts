@@ -11,6 +11,8 @@ Ford.TirePressure = 5;
 Ford.Print();
 Ford.EngineStart();
 
+Person person = new();
+person.Try();
 class Car
 {
     private float tirePressure = 10.5f;
@@ -37,4 +39,15 @@ class Car
     }
 
     public void Print() => Console.WriteLine($"TP is {tirePressure} and speed is {Speed}");
+}
+
+class Person
+{
+    public void Try()
+    {
+        Car car = new();
+        car.TirePressure = 6;
+        car.Print();
+        car.EngineStart();
+    }
 }
