@@ -1,5 +1,5 @@
 using System;
-
+// hmm
 public class Kata
 {
   public static int Triangular(int n)
