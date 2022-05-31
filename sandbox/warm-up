@@ -1,0 +1,60 @@
+using System;
+using System.Globalization;
+using System.Linq;
+
+Worker Adam = new();
+
+Adam.ShowJunSalary();
+Console.WriteLine(Adam.str);
+Console.ReadKey();
+Console.WriteLine(Adam.Technologies[2]);
+Console.WriteLine(Adam.mas[0]);
+
+foreach (string n in Adam.Technologies)
+{
+    Console.WriteLine(n);
+}
+
+Array.Sort(Adam.Technologies);
+
+foreach (string n in Adam.Technologies)
+{
+    Console.WriteLine(n);
+}
+
+Console.WriteLine(Adam.mas.Max());
+Console.WriteLine(Adam.mas.Min());
+Console.WriteLine(Adam.mas.Sum());
+
+class Worker
+{
+    static float salaryInBucks = 1000f;
+    float JuniorCoefficient = 0.5f;
+    float MiddleCoefficient = 1f;
+    float SeniorCoefficient = 1.5f;
+    bool smth = true;
+    char l = 'l';
+    public string str = Convert.ToString(salaryInBucks);
+    public string[] Technologies = {"Assembler", "C#", "RPGLE", "SQL", "JS"};
+
+
+    public float[] mas = {1000.212312f,3.231114f};
+
+
+
+
+    public void ShowJunSalary()
+    {
+        Console.WriteLine($"{salaryInBucks*JuniorCoefficient}$");
+    }
+
+    public void ShowMidSalary()
+    {
+        Console.WriteLine($"{salaryInBucks*MiddleCoefficient}$");
+    }
+
+    public void ShowSeniorSalary()
+    {
+        Console.WriteLine($"{salaryInBucks*SeniorCoefficient}$");
+    }
+}
