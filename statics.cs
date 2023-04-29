@@ -18,6 +18,10 @@ class Construct
 {
     static int counter = -1;
     static Construct()  // This will appear only in first inito of object
+    // For real, this will not just (appear in first init) -
+    // memory will be allocated even without init 
+    // static classes,methods are classes,methods, that will be in any case 
+    // and they will be, like, u cant change them, this is smth like roots of the tree, when u make them
     {
         counter++;
     }
